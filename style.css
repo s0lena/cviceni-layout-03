@@ -38,6 +38,10 @@ aside > :last-child,
   margin-bottom: 0;
 }
 
+.reklama1 {
+  margin-bottom: 20px;
+}
+
 .hlavicka {
   background-color: #2ecc71;
 }
@@ -65,3 +69,47 @@ aside > :last-child,
 	- 640px
 	- 1000px
 */
+@media (min-width: 640px) {
+  .kontejner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .obsah {
+    display: flex;
+  }
+  .obsah .clanek {
+    max-width: 60%;
+  }
+  .obsah .reklamy {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .kontejner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu {
+    max-width: 25%;
+  }
+  .obsah {
+    max-width: 75%;
+    flex-direction: column;
+  }
+  .obsah .clanek {
+    max-width: 100%;
+  }
+  .obsah .reklamy {
+    display: inline-flex;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .reklama1,
+  .reklama2 {
+    max-width: 50%;
+    height: 100%;
+  }
+}
